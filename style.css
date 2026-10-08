@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  width: 514px;
+  padding: 5px 5px 5px 5px;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  align-content: center;
+  justify-content: center;
+  border: 2px solid black;
+  grid-template-areas:
+    "a a . b . . c c c c"
+    ". . . b . . . . . ."
+    "d . . b . e e e . f"
+    "d . . . . . . . . f"
+    "d . . . . . . . . ."
+    "d . . . . g . . . h"
+    ". . . . . g . . . h"
+    "j j . . . . . . . h"
+    ". . . . . . . . . ."
+    ". . . . l l l l l l";
+}
+
+.grid-item:nth-child(1) {
+  grid-area: a;
+  background-color: purple;
+}
+
+.grid-item:nth-child(2) {
+  grid-area: b;
+  background-color: #80ef80;
+}
+
+.grid-item:nth-child(3) {
+  grid-area: c;
+  background-color: blue;
+}
+
+.grid-item:nth-child(4) {
+  grid-area: d;
+  background-color: blue;
+}
+
+.grid-item:nth-child(5) {
+  grid-area: e;
+  background-color: #80ef80;
+}
+
+.grid-item:nth-child(6) {
+  grid-area: f;
+  background-color: purple;
+}
+
+.grid-item:nth-child(7) {
+  grid-area: g;
+  background-color: purple;
+}
+
+.grid-item:nth-child(8) {
+  grid-area: h;
+  background-color: #80ef80;
+}
+
+.grid-item:nth-child(9) {
+  grid-area: j;
+  background-color: purple;
+}
+
+.grid-item:nth-child(10) {
+  grid-area: l;
+  background-color: red;
+}
+
+.grid-item:nth-child(-n + 10) {
+  border: 2px solid black;
+}
